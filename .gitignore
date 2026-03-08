@@ -1,0 +1,69 @@
+# Composer dependencies
+/vendor/
+
+# Magento generated code
+/generated/*
+!/generated/.htaccess
+
+# Runtime data
+/var/*
+!/var/.htaccess
+
+# Static assets (built)
+/pub/static/*
+!/pub/static/.htaccess
+!/pub/static/deployed_version.txt
+
+# Media uploads
+/pub/media/*
+!/pub/media/.htaccess
+!/pub/media/catalog/.htaccess
+!/pub/media/customer/.htaccess
+!/pub/media/downloadable/.htaccess
+!/pub/media/import/.htaccess
+!/pub/media/theme_customization/.htaccess
+
+# Environment-specific configuration
+/app/etc/env.php
+/app/etc/config.php
+
+# Composer auth (private credentials)
+auth.json
+
+# IDE/editor settings
+/.idea/
+/.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.bak
+
+# Node packages (if using frontend tooling)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Tool caches
+.php-cs-fixer.cache
+.grunt/
+
+# Logs
+*.log
+
+# Sitemap
+/pub/sitemap/
+/pub/sitemap.xml
+
+# Maintenance flag
+/var/.maintenance.flag
+
+# Update packages
+/update/
+
+# PhpStorm
+atlassian-ide-plugin.xml
