@@ -67,3 +67,25 @@ yarn.lock
 
 # PhpStorm
 atlassian-ide-plugin.xml
+
+# Sample files (should not be committed)
+*.sample
+auth.json.sample
+nginx.conf.sample
+grunt-config.json.sample
+Gruntfile.js.sample
+package.json.sample
+
+# User-specific configuration
+.user.ini
+
+# Magento setup directory (generated)
+/setup/
+
+# Editor config cache
+.editorconfig
+
+# Grunt build files
+Gruntfile.js
+grunt-config.json
+package.json
