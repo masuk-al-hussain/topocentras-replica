@@ -71,7 +71,7 @@ class ProductImporter
             throw new LocalizedException(__('Cannot open CSV file: %1', $filePath));
         }
 
-        $headers = fgetcsv($handle);
+        $headers = fgetcsv($handle, 0, ',', '"', '\\');
         if (!$headers) {
             fclose($handle);
             throw new LocalizedException(__('CSV file is empty or invalid'));
@@ -81,7 +81,7 @@ class ProductImporter
         $batchNumber = 0;
         $startTime = time();
         
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '\\')) !== false) {
             if (count($row) !== count($headers)) {
                 continue;
             }

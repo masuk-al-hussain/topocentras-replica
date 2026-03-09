@@ -21,7 +21,7 @@ class ImportProducts extends Command
     public function __construct(
         ProductImporter $productImporter,
         State $appState,
-        string $name = null
+        ?string $name = null
     ) {
         $this->productImporter = $productImporter;
         $this->appState = $appState;
