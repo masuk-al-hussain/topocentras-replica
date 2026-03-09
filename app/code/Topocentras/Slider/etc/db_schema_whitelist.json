@@ -1,0 +1,21 @@
+{
+    "topocentras_slider": {
+        "column": {
+            "slide_id": true,
+            "title": true,
+            "image": true,
+            "url": true,
+            "sort_order": true,
+            "is_active": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "TOPOCENTRAS_SLIDER_SORT_ORDER": true,
+            "TOPOCENTRAS_SLIDER_IS_ACTIVE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

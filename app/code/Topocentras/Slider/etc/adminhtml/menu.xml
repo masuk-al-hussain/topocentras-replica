@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Topocentras_Slider::slider" 
+             title="Slider" 
+             module="Topocentras_Slider" 
+             sortOrder="10" 
+             parent="Magento_Backend::content" 
+             action="topocentras_slider/slide/index" 
+             resource="Topocentras_Slider::slider"/>
+    </menu>
+</config>

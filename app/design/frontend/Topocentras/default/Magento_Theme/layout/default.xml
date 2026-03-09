@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/styles.css"/>
+    </head>
+    <body>
+        <!-- Remove header.panel after moving wishlist out -->
+        <referenceContainer name="header.panel" remove="true"/>
+        
+        <!-- Remove Advanced Search link -->
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        
+        <!-- Add custom topbar before default header -->
+        <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.topbar" 
+                   template="Magento_Theme::html/topbar.phtml" 
+                   before="-"/>
+        </referenceContainer>
+        
+        <!-- Add custom navigation after header -->
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.navigation" 
+                   template="Magento_Theme::html/navigation.phtml"
+                   after="header"/>
+        </referenceContainer>
+    </body>
+</page>

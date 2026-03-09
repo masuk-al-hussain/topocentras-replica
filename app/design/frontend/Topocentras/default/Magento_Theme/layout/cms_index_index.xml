@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- Load slider CSS -->
+        <css src="css/slider.css"/>
+    </head>
+    <body>
+        <!-- Add slider before main content -->
+        <referenceContainer name="content">
+            <block class="Topocentras\Slider\Block\Slider" 
+                   name="topocentras.slider" 
+                   template="Magento_Theme::slider/main-slider.phtml"
+                   before="-"/>
+        </referenceContainer>
+    </body>
+</page>

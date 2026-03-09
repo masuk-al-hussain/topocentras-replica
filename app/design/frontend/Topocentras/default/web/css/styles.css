@@ -1,0 +1,152 @@
+/* Topocentras Header Styles - Plain CSS */
+
+/* Topbar */
+.topbar {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 13px;
+    color: #666;
+}
+
+.topbar > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar > div > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topbar a {
+    color: #666;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    color: #0066cc;
+}
+
+.topbar span {
+    font-weight: 600;
+    color: #333;
+}
+
+.topbar a[href*="account"] {
+    background-color: #0052a3;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+
+/* Main Header */
+.main-header {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.main-header > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-header-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0052a3;
+    text-decoration: none;
+}
+
+.main-header-search {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+
+.main-header-search input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.main-header-search button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0052a3;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.main-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-header-actions a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-header-actions a:last-child {
+    gap: 10px;
+    padding: 10px 15px;
+    border-color: #333;
+}
+
+/* Navigation */
+.navigation-bar {
+    background-color: #0052a3;
+}
+
+.navigation-bar > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navigation-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.navigation-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

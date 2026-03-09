@@ -1,0 +1,68 @@
+<?php
+$slides = $block->getSlides();
+if (empty($slides)): ?>
+    <!-- No slides configured -->
+<?php else: ?>
+<div class="top-slider">
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <?php foreach ($slides as $index => $slide): ?>
+            <div class="slide <?php echo $index === 0 ? 'active' : ''; ?>">
+                <a href="<?php echo $block->escapeUrl($slide['url']); ?>">
+                    <img src="<?php echo $block->escapeUrl($slide['image']); ?>" 
+                         alt="<?php echo $block->escapeHtml($slide['alt']); ?>">
+                </a>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        
+        <?php if (count($slides) > 1): ?>
+        <!-- Navigation Arrows -->
+        <button class="slider-nav prev" onclick="moveSlide(-1)">‹</button>
+        <button class="slider-nav next" onclick="moveSlide(1)">›</button>
+        
+        <!-- Dots Navigation -->
+        <div class="slider-dots">
+            <?php foreach ($slides as $index => $slide): ?>
+            <span class="dot <?php echo $index === 0 ? 'active' : ''; ?>" 
+                  onclick="currentSlide(<?php echo $index; ?>)"></span>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>
+
+<script>
+let currentSlideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.top-slider .slide');
+    const dots = document.querySelectorAll('.top-slider .dot');
+    
+    if (index >= slides.length) currentSlideIndex = 0;
+    if (index < 0) currentSlideIndex = slides.length - 1;
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+function moveSlide(direction) {
+    currentSlideIndex += direction;
+    showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index;
+    showSlide(currentSlideIndex);
+}
+
+// Auto-play slider every 5 seconds
+setInterval(() => {
+    currentSlideIndex++;
+    showSlide(currentSlideIndex);
+}, 5000);
+</script>

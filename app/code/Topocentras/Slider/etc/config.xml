@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <topocentras_slider>
+            <slide1>
+                <enabled>1</enabled>
+                <url>#</url>
+            </slide1>
+            <slide2>
+                <enabled>1</enabled>
+                <url>#</url>
+            </slide2>
+            <slide3>
+                <enabled>1</enabled>
+                <url>#</url>
+            </slide3>
+        </topocentras_slider>
+    </default>
+</config>
