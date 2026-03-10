@@ -1,14 +1,22 @@
 <div class="main-header">
     <div>
         <div class="main-header-logo">
-            <?php echo $block->getChildHtml('topocentras.logo'); ?>
+            <?php echo $block->getChildHtml('logo'); ?>
         </div>
         <div class="main-header-search">
-            <?php echo $block->getChildHtml('top.search'); ?>
+            <form action="<?php echo $block->getUrl('catalogsearch/result'); ?>" method="get">
+                <input type="text" 
+                       name="q" 
+                       placeholder="<?php echo __('Search entire store here...'); ?>" 
+                       maxlength="128">
+                <button type="submit">
+                    <span><?php echo __('Search'); ?></span>
+                </button>
+            </form>
         </div>
         <div class="main-header-actions">
             <a href="<?php echo $block->getUrl('wishlist'); ?>">♥</a>
-            <a href="<?php echo $block->getUrl('checkout/cart'); ?>">🛒 Cart</a>
+            <?php echo $block->getChildHtml('minicart'); ?>
         </div>
     </div>
 </div>

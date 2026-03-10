@@ -7,6 +7,11 @@
         <!-- Remove header.panel after moving wishlist out -->
         <referenceContainer name="header.panel" remove="true"/>
         
+        <!-- Remove default navigation sections -->
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceBlock name="store.menu" remove="true"/>
+        <referenceContainer name="navigation.sections" remove="true"/>
+        
         <!-- Remove Advanced Search link -->
         <referenceBlock name="advanced-search-link" remove="true"/>
         
@@ -16,7 +21,16 @@
                    name="topocentras.topbar" 
                    template="Magento_Theme::html/topbar.phtml" 
                    before="-"/>
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.main.header" 
+                   template="Magento_Theme::html/main-header.phtml" 
+                   after="topocentras.topbar">
+            </block>
         </referenceContainer>
+        
+        <!-- Move logo and minicart to main header -->
+        <move element="logo" destination="topocentras.main.header" before="-"/>
+        <move element="minicart" destination="topocentras.main.header" after="-"/>
         
         <!-- Add custom navigation after header -->
         <referenceContainer name="page.top">
