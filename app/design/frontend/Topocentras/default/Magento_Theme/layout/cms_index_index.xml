@@ -7,6 +7,10 @@
         <css src="css/category-menu.css"/>
         <!-- Load banner carousel CSS -->
         <css src="css/banner-carousel.css"/>
+        <!-- Load weekly deals slider CSS -->
+        <css src="css/weekly-deals-slider.css"/>
+        <!-- Load weekly deals slider JS -->
+        <script src="js/weekly-deals-slider.js"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -33,6 +37,12 @@
                            after="topocentras.slider"/>
                 </container>
             </container>
+            
+            <!-- Weekly Deals Slider -->
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.weekly.deals" 
+                   template="Magento_Theme::weekly-deals/slider.phtml"
+                   after="homepage.slider.wrapper"/>
         </referenceContainer>
     </body>
 </page>
