@@ -1,0 +1,31 @@
+.brands-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1260px;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    background: #fff;
+    box-shadow: 0px 3px 5px 0px rgb(64 64 64 / 7%);
+}
+
+.brands-links {
+    display: flex;
+    justify-content: center;
+}
+
+.brands-links img {
+    width: 90%;
+}
+
+@media only screen and (max-width: 858px) {
+    .brands-container {
+        flex-wrap: wrap;
+        gap: 22px;
+        padding: 24px 25px;
+    }
+
+    .brands-links {
+        width: 35%;
+    }
+}
