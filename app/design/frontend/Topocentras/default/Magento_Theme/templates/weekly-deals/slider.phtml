@@ -1,0 +1,52 @@
+<?php
+$mediaUrl = $block->getUrl('', ['_type' => \Magento\Framework\UrlInterface::URL_TYPE_MEDIA]);
+?>
+<div class="widget block block-static-block">
+    <div class="wkl-container">
+        <h2 class="slide-title"><?php echo __('Savaitės TOPAI'); ?></h2>
+        <p class="slide-subtitle"><strong><?php echo __('Tiksintis pasiūlymas!'); ?></strong> <?php echo __('Paskubėk pagauti savo savaitės TOPĄ už gerą kainą. Kiekvieną savaitę tavęs lauks vis nauji pasiūlymai!'); ?></p>
+        <div class="wkl__slider" data-slider-cards="">
+            <ul class="slider__track" data-slider-track="">
+                <li>
+                    <div class="slide__card">
+                        <a href="#">
+                            <img src="<?php echo $mediaUrl; ?>topocentras/weekly-deals-sliders/slide-1.jpg" alt="" width="1080" height="1330">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide__card">
+                        <a href="#">
+                            <img src="<?php echo $mediaUrl; ?>topocentras/weekly-deals-sliders/slide-2.jpg" alt="" width="1080" height="1330">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide__card">
+                        <a href="#">
+                            <img src="<?php echo $mediaUrl; ?>topocentras/weekly-deals-sliders/slide-3.jpg" alt="" width="1080" height="1330">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide__card">
+                        <a href="#">
+                            <img src="<?php echo $mediaUrl; ?>topocentras/weekly-deals-sliders/slide-4.jpg" alt="" width="1080" height="1330">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide__card">
+                        <a href="#">
+                            <img src="<?php echo $mediaUrl; ?>topocentras/weekly-deals-sliders/slide-5.jpg" alt="" width="1080" height="1330">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="slider__buttons">
+                <button class="slider__button b-left" aria-label="previous slide" data-slider-prev=""></button>
+                <button class="slider__button b-right" aria-label="next slide" data-slider-next=""></button>
+            </div>
+        </div>
+    </div>
+</div>
