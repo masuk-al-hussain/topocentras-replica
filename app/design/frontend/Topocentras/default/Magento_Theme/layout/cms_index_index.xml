@@ -5,6 +5,8 @@
         <css src="css/slider.css"/>
         <!-- Load category menu CSS -->
         <css src="css/category-menu.css"/>
+        <!-- Load banner carousel CSS -->
+        <css src="css/banner-carousel.css"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -17,10 +19,16 @@
                        name="topocentras.category.menu" 
                        template="Magento_Theme::html/category-menu.phtml"
                        before="-"/>
-                <block class="Topocentras\Slider\Block\Slider" 
-                       name="topocentras.slider" 
-                       template="Magento_Theme::slider/main-slider.phtml"
-                       after="topocentras.category.menu"/>
+                <container name="slider.carousel.column" htmlTag="div" htmlClass="slider-carousel-column">
+                    <block class="Topocentras\Slider\Block\Slider" 
+                           name="topocentras.slider" 
+                           template="Magento_Theme::slider/main-slider.phtml"
+                           before="-"/>
+                    <block class="Magento\Framework\View\Element\Template" 
+                           name="topocentras.banner.carousel" 
+                           template="Magento_Theme::banner/carousel.phtml"
+                           after="topocentras.slider"/>
+                </container>
             </container>
         </referenceContainer>
     </body>
