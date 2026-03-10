@@ -52,7 +52,7 @@ class ProductImporter
         $this->curl = $curl;
     }
 
-    public function importFromCsv(string $filePath, int $batchSize = 100, $output = null): array
+    public function importFromCsv(string $filePath, int $batchSize = 100, $output = null, bool $skipImages = false): array
     {
         $stats = [
             'total' => 0,
@@ -91,7 +91,7 @@ class ProductImporter
 
             if (count($batch) >= $batchSize) {
                 $batchNumber++;
-                $this->processBatch($batch, $stats);
+                $this->processBatch($batch, $stats, $skipImages);
                 
                 if ($output) {
                     $elapsed = time() - $startTime;
@@ -113,7 +113,7 @@ class ProductImporter
 
         if (!empty($batch)) {
             $batchNumber++;
-            $this->processBatch($batch, $stats);
+            $this->processBatch($batch, $stats, $skipImages);
             
             if ($output) {
                 $output->writeln(sprintf(
@@ -128,13 +128,13 @@ class ProductImporter
         return $stats;
     }
 
-    private function processBatch(array $batch, array &$stats): void
+    private function processBatch(array $batch, array &$stats, bool $skipImages = false): void
     {
         foreach ($batch as $data) {
             $stats['total']++;
             
             try {
-                $result = $this->importProduct($data);
+                $result = $this->importProduct($data, $skipImages);
                 if ($result === 'created') {
                     $stats['created']++;
                 } elseif ($result === 'updated') {
@@ -152,7 +152,7 @@ class ProductImporter
         }
     }
 
-    private function importProduct(array $data): string
+    private function importProduct(array $data, bool $skipImages = false): string
     {
         if (empty($data['id']) || empty($data['title'])) {
             return 'skipped';
@@ -205,7 +205,7 @@ class ProductImporter
 
         $product = $this->productRepository->save($product);
 
-        if (!empty($data['image_link'])) {
+        if (!$skipImages && !empty($data['image_link'])) {
             $this->assignProductImage($product, $data['image_link']);
         }
 

@@ -14,6 +14,7 @@ class ImportProducts extends Command
 {
     const ARGUMENT_FILE = 'file';
     const OPTION_BATCH_SIZE = 'batch-size';
+    const OPTION_SKIP_IMAGES = 'skip-images';
 
     private $productImporter;
     private $appState;
@@ -43,6 +44,12 @@ class ImportProducts extends Command
                 InputOption::VALUE_OPTIONAL,
                 'Batch size for processing',
                 100
+            )
+            ->addOption(
+                self::OPTION_SKIP_IMAGES,
+                's',
+                InputOption::VALUE_NONE,
+                'Skip image downloads (products only)'
             );
 
         parent::configure();
@@ -57,14 +64,16 @@ class ImportProducts extends Command
 
         $filePath = $input->getArgument(self::ARGUMENT_FILE);
         $batchSize = (int) $input->getOption(self::OPTION_BATCH_SIZE);
+        $skipImages = $input->getOption(self::OPTION_SKIP_IMAGES);
 
         $output->writeln('<info>Starting product import...</info>');
         $output->writeln('<info>File: ' . $filePath . '</info>');
         $output->writeln('<info>Batch size: ' . $batchSize . '</info>');
+        $output->writeln('<info>Skip images: ' . ($skipImages ? 'Yes' : 'No') . '</info>');
         $output->writeln('');
 
         try {
-            $stats = $this->productImporter->importFromCsv($filePath, $batchSize, $output);
+            $stats = $this->productImporter->importFromCsv($filePath, $batchSize, $output, $skipImages);
 
             $output->writeln('');
             $output->writeln('<info>Import completed!</info>');

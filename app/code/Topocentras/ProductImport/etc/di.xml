@@ -4,6 +4,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="topocentras_product_import" xsi:type="object">Topocentras\ProductImport\Console\Command\ImportProducts</item>
+                <item name="topocentras_image_import" xsi:type="object">Topocentras\ProductImport\Console\Command\ImportImages</item>
             </argument>
         </arguments>
     </type>
