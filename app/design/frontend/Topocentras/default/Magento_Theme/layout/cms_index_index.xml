@@ -3,14 +3,25 @@
     <head>
         <!-- Load slider CSS -->
         <css src="css/slider.css"/>
+        <!-- Load category menu CSS -->
+        <css src="css/category-menu.css"/>
     </head>
     <body>
-        <!-- Add slider before main content -->
+        <!-- Remove page title from homepage -->
+        <referenceBlock name="page.main.title" remove="true"/>
+        
+        <!-- Add slider and category menu before main content -->
         <referenceContainer name="content">
-            <block class="Topocentras\Slider\Block\Slider" 
-                   name="topocentras.slider" 
-                   template="Magento_Theme::slider/main-slider.phtml"
-                   before="-"/>
+            <container name="homepage.slider.wrapper" htmlTag="div" htmlClass="homepage-slider-wrapper" before="-">
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="topocentras.category.menu" 
+                       template="Magento_Theme::html/category-menu.phtml"
+                       before="-"/>
+                <block class="Topocentras\Slider\Block\Slider" 
+                       name="topocentras.slider" 
+                       template="Magento_Theme::slider/main-slider.phtml"
+                       after="topocentras.category.menu"/>
+            </container>
         </referenceContainer>
     </body>
 </page>
