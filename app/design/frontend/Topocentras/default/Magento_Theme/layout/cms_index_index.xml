@@ -11,6 +11,8 @@
         <css src="css/weekly-deals-slider.css"/>
         <!-- Load weekly deals slider JS -->
         <script src="js/weekly-deals-slider.js"/>
+        <!-- Load categories slider CSS -->
+        <css src="css/categories-slider.css"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -43,6 +45,12 @@
                    name="topocentras.weekly.deals" 
                    template="Magento_Theme::weekly-deals/slider.phtml"
                    after="homepage.slider.wrapper"/>
+            
+            <!-- Categories Slider -->
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.categories.slider" 
+                   template="Magento_Theme::categories/slider.phtml"
+                   after="topocentras.weekly.deals"/>
         </referenceContainer>
     </body>
 </page>
