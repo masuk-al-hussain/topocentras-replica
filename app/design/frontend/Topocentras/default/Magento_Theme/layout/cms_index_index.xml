@@ -12,6 +12,9 @@
         <!-- Remove page title from homepage -->
         <referenceBlock name="page.main.title" remove="true"/>
         
+        <!-- Remove CMS content block -->
+        <referenceBlock name="cms_page" remove="true"/>
+        
         <!-- Add slider and category menu before main content -->
         <referenceContainer name="content">
             <container name="homepage.slider.wrapper" htmlTag="div" htmlClass="homepage-slider-wrapper" before="-">
