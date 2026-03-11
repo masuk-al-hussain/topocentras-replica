@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Topocentras_OfferSlider::offerslider" title="Offer Sliders" module="Topocentras_OfferSlider" sortOrder="100" resource="Topocentras_OfferSlider::offerslider"/>
+        <add id="Topocentras_OfferSlider::manage" title="Manage Sliders" module="Topocentras_OfferSlider" sortOrder="10" parent="Topocentras_OfferSlider::offerslider" action="offerslider/slider/index" resource="Topocentras_OfferSlider::slider"/>
+    </menu>
+</config>

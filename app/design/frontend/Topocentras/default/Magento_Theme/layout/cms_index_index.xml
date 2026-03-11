@@ -69,6 +69,23 @@
                    name="topocentras.popular.products" 
                    template="Magento_Theme::popular-products/slider.phtml"
                    after="topocentras.brands.block"/>
+
+            <!-- Offer Slider -->
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">1</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 2 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-2" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">2</argument>
+              </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

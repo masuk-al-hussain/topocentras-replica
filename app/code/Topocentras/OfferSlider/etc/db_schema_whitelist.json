@@ -1,0 +1,25 @@
+{
+    "topocentras_offer_slider": {
+        "column": {
+            "slider_id": true,
+            "title": true,
+            "all_offers_link": true,
+            "all_offers_text": true,
+            "banner_image": true,
+            "banner_link": true,
+            "product_skus": true,
+            "layout_position": true,
+            "is_active": true,
+            "sort_order": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "TOPOCENTRAS_OFFER_SLIDER_IS_ACTIVE": true,
+            "TOPOCENTRAS_OFFER_SLIDER_SORT_ORDER": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

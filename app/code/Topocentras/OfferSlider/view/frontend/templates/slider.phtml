@@ -1,0 +1,82 @@
+<?php
+/**
+ * @var $block \Topocentras\OfferSlider\Block\OfferSlider
+ */
+$sliderId = $block->getSliderId();
+if ($sliderId) {
+    $sliders = [$block->getSliderById($sliderId)];
+} else {
+    $sliders = $block->getActiveSliders();
+}
+
+foreach ($sliders as $slider):
+    if (!$slider->getId() || !$slider->getIsActive()) {
+        continue;
+    }
+    
+    $products = $block->getSliderProducts($slider);
+    if (empty($products)) {
+        continue;
+    }
+    
+    $uniqueId = 'category-id-' . $slider->getId();
+    $layoutPosition = $slider->getLayoutPosition() ?: 'left';
+?>
+
+<div class="top-offers top-offers-banner layout-<?= $block->escapeHtmlAttr($layoutPosition) ?>">
+    <div class="side-container">
+        <div class="left-column">
+            <div class="top-offers-title-block">
+                <h2 class="top-offers-title">
+                    <?= $block->escapeHtml($slider->getTitle()) ?>
+                </h2>
+                <?php if ($slider->getAllOffersLink()): ?>
+                    <a href="<?= $block->escapeUrl($slider->getAllOffersLink()) ?>" class="link">
+                        <?= $block->escapeHtml($slider->getAllOffersText() ?: __('Visi pasiūlymai')) ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+            
+            <?php if ($slider->getBannerImage()): ?>
+                <a class="top-offers-banner-link" href="<?= $block->escapeUrl($slider->getBannerLink() ?: '#') ?>">
+                    <img title="<?= $block->escapeHtmlAttr($slider->getTitle()) ?>" 
+                         src="<?= $block->escapeUrl($block->getBannerImageUrl($slider->getBannerImage())) ?>" 
+                         alt="<?= $block->escapeHtmlAttr($slider->getTitle()) ?>">
+                </a>
+            <?php endif; ?>
+        </div>
+        
+        <div class="product-slider" id="<?= $block->escapeHtmlAttr($uniqueId) ?>" 
+             data-mage-init='{"Topocentras_OfferSlider/js/slider": {"itemsPerView": 4}}'>
+            <div class="slider-container">
+                <div class="slider-track">
+                    <?php foreach ($products as $product): ?>
+                        <div class="slider-item">
+                            <div class="product-item">
+                                <a href="<?= $block->escapeUrl($product['url']) ?>" class="product-photo">
+                                    <img alt="<?= $block->escapeHtmlAttr($product['name']) ?>" 
+                                         src="<?= $block->escapeUrl($product['image']) ?>" 
+                                         loading="lazy">
+                                </a>
+                                <a class="product-name" href="<?= $block->escapeUrl($product['url']) ?>">
+                                    <?= $block->escapeHtml($product['name']) ?>
+                                </a>
+                                <div class="price-box">
+                                    <span class="price"><?= $product['final_price'] ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <button type="button" class="slider-prev" aria-label="Previous">
+                <span>‹</span>
+            </button>
+            <button type="button" class="slider-next" aria-label="Next">
+                <span>›</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<?php endforeach; ?>
