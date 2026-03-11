@@ -86,6 +86,86 @@
                   <argument name="slider_id" xsi:type="string">2</argument>
               </arguments>
             </block>
+            <!-- Offer Slider 3 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-3" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">3</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 4 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-4" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">4</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 5 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-5" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">5</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 6 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-6" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">6</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 7 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-7" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">7</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 8 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-8" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">8</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 9 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-9" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">9</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 10 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-10" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">10</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 11 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-11" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">11</argument>
+              </arguments>
+            </block>
+            <!-- Offer Slider 12 -->       
+            <block class="Topocentras\OfferSlider\Block\OfferSlider" 
+                   name="offer.slider.specific-12" 
+                   template="Topocentras_OfferSlider::slider.phtml">
+              <arguments>
+                  <argument name="slider_id" xsi:type="string">12</argument>
+              </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
