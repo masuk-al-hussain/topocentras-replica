@@ -20,7 +20,7 @@
 .topbar > div > div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
 }
 
 .topbar a {
@@ -41,6 +41,24 @@
     color: #0066cc;
 }
 
+.topbar > div > div:first-child a:first-child::after,
+.topbar > div > div:first-child a:nth-child(2)::after {
+    content: '';
+    width: 1px;
+    height: 18px;
+    background-color: #d9d7c1;
+    margin: 0 8px;
+}
+
+.topbar p.topbar-link {
+    margin: 0;
+    text-align: center;
+}
+
+.topbar p.topbar-link:hover {
+    color: orange;
+}
+
 .topbar span {
     display: flex;
     align-items: center;
@@ -55,6 +73,11 @@
     flex-shrink: 0;
 }
 
+.topbar > div > div:first-child span:last-child {
+    color: #6c6f70;
+    font-weight: normal;
+}
+
 .topbar a[href*="account"] {
     background-color: #0052a3;
     color: white;
@@ -66,7 +89,7 @@
 .main-header {
     background-color: white;
     border-bottom: 1px solid #e0e0e0;
-    padding: 15px 0;
+    padding: 30px 0;
 }
 
 .main-header > div {
@@ -78,11 +101,20 @@
     gap: 30px;
 }
 
+.main-header-logo img {
+    max-width: unset;
+    height: auto;
+}
+
 .main-header-logo a {
     font-size: 24px;
     font-weight: bold;
     color: #0052a3;
     text-decoration: none;
+}
+
+.main-header-logo .logo {
+    margin: 0;
 }
 
 .main-header-search {

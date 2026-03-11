@@ -1,0 +1,14 @@
+<?php
+/**
+ * Logo template without inline styles
+ */
+?>
+<a href="<?= $escaper->escapeUrl($block->getUrl('')) ?>"
+   title="<?= $escaper->escapeHtmlAttr($block->getLogoAlt()) ?>"
+   aria-label="<?= $escaper->escapeHtmlAttr($block->getLogoAlt()) ?>"
+   class="logo">
+    <img src="<?= $escaper->escapeUrl($block->getLogoSrc()) ?>"
+         alt="<?= $escaper->escapeHtmlAttr($block->getLogoAlt()) ?>"
+         width="186"
+         height="53" />
+</a>

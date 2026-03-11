@@ -29,6 +29,11 @@
         </referenceContainer>
         
         <!-- Move logo and minicart to main header -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="template" xsi:type="string">Magento_Theme::html/logo.phtml</argument>
+            </arguments>
+        </referenceBlock>
         <move element="logo" destination="topocentras.main.header" before="-"/>
         <move element="minicart" destination="topocentras.main.header" after="-"/>
         
