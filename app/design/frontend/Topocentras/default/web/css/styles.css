@@ -24,8 +24,17 @@
 }
 
 .topbar a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: #666;
     text-decoration: none;
+}
+
+.topbar a img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
 .topbar a:hover {
@@ -33,8 +42,17 @@
 }
 
 .topbar span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-weight: 600;
     color: #333;
+}
+
+.topbar span img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
 .topbar a[href*="account"] {
@@ -145,6 +163,12 @@
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
+}
+
+.navigation-menu li a img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 .navigation-menu li a:hover {

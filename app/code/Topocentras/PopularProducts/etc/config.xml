@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <topocentras_popular_products>
+            <general>
+                <enabled>1</enabled>
+                <product_skus></product_skus>
+                <slider_title>Populiaru dabar</slider_title>
+            </general>
+        </topocentras_popular_products>
+    </default>
+</config>

@@ -1,0 +1,137 @@
+<?php
+if (!$block->isEnabled()) {
+    return;
+}
+
+$products = $block->getPopularProducts();
+?>
+<div class="popular-products-widget">
+    <div class="popular-products-container">
+        <h1 class="popular-products-title"><?= $block->escapeHtml($block->getSliderTitle()) ?></h1>
+        
+        <?php if ($products && $products->getSize()): ?>
+        <div class="popular-products-slider">
+            <div class="products-track">
+                <?php foreach ($products as $product): ?>
+                <div class="product-card">
+                    <div class="lupa-search-result-product-contents">
+                        <a class="lupa-search-result-product-image-section" href="<?= $product->getProductUrl() ?>">
+                            <div class="lupa-search-results-image-wrapper">
+                                <img class="lupa-images-main-image lupa-search-results-image" 
+                                     src="<?= $block->getProductImageUrl($product) ?>" 
+                                     alt="<?= $block->escapeHtml($product->getName()) ?>">
+                            </div>
+                        </a>
+                        
+                        <div class="lupa-search-result-product-details-section">
+                            <div class="lupa-search-results-product-title">
+                                <a href="<?= $product->getProductUrl() ?>" class="lupa-search-results-product-title-text lupa-title-link">
+                                    <?= $block->escapeHtml($product->getName()) ?>
+                                </a>
+                            </div>
+                            
+                            <?php
+                            $attributes = [];
+                            if ($product->getAttributeText('color')) {
+                                $attributes[] = ['label' => __('Spalva'), 'value' => $product->getAttributeText('color')];
+                            }
+                            if ($product->getData('storage_capacity')) {
+                                $attributes[] = ['label' => __('Vidinė atmintis (GB)'), 'value' => $product->getData('storage_capacity') . ' GB'];
+                            }
+                            if ($product->getData('screen_size')) {
+                                $attributes[] = ['label' => __('Ekrano įstrižainė (")'), 'value' => $product->getData('screen_size') . '"'];
+                            }
+                            ?>
+                            
+                            <?php if (count($attributes) > 0): ?>
+                            <div class="lupa-attributes">
+                                <?php foreach (array_slice($attributes, 0, 2) as $attr): ?>
+                                <div class="ProductCardAttributes-productCardAttributes-3IE">
+                                    <span><?= $attr['label'] ?>:</span>
+                                    <span class="ProductCardAttributes-value-1kF"><?= $attr['value'] ?></span>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <?php endif; ?>
+                            
+                            <div class="flex-grow-1"></div>
+                            
+                            <?php if ($product->getSpecialPrice()): ?>
+                            <div class="loyalty-price">
+                                <div class="LoyaltyPrice-wrapper-2ws">
+                                    <div class="LoyaltyPrice-loyaltyDetails-2dv">
+                                        <div class="LoyaltyPrice-label-6p8">
+                                            <?= __('TOPO KLUBO nariams') ?>
+                                        </div>
+                                        <div class="LoyaltyPrice-price-2eZ">
+                                            <img src="<?= $block->getViewFileUrl('images/topo-club-icon.svg') ?>" alt="">
+                                            <span><?= $block->getFormattedPrice($product->getSpecialPrice()) ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+                            
+                            <div class="final-price">
+                                <span><?= $block->getFormattedPrice($product->getPrice()) ?></span>
+                            </div>
+                            
+                            <div class="StoreDeliveryNotice-label-2PD">
+                                <img class="StoreDeliveryNotice-icon-1d-" src="<?= $block->getViewFileUrl('images/shipping-icon.svg') ?>" alt="">
+                                <?= __('Atsiimkite jau po 30 min.') ?>
+                            </div>
+                        </div>
+                        
+                        <div class="lupa-element-group-card-bottom">
+                            <div class="lupa-search-results-add-to-cart-wrapper">
+                                <div class="lupa-search-results-product-addtocart">
+                                    <button class="lupa-add-to-cart" 
+                                            data-product-id="<?= $product->getId() ?>"
+                                            data-product-sku="<?= $block->escapeHtml($product->getSku()) ?>">
+                                        <?= __('Į krepšelį') ?>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="lupa-wishlist">
+                                <div class="WishlistButton-container-jZ9">
+                                    <div class="WishlistButton-inner-2oN">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="lupa-element-group-compare">
+                            <div class="lupa-compare">
+                                <button class="Compare-compareContainer-uDf" data-product-id="<?= $product->getId() ?>">
+                                    <span class="Compare-checkboxWrapper-C52">
+                                        <span class="Checkbox-checkBox-1fD"></span>
+                                    </span>
+                                    <span><?= __('Palyginti') ?></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            
+            <button class="slider-nav prev" aria-label="<?= __('Previous') ?>">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                </svg>
+            </button>
+            <button class="slider-nav next" aria-label="<?= __('Next') ?>">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+            </button>
+        </div>
+        <?php else: ?>
+        <p class="no-products"><?= __('Šiuo metu nėra populiarių produktų.') ?></p>
+        <?php endif; ?>
+    </div>
+</div>

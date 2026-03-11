@@ -15,6 +15,10 @@
         <css src="css/categories-slider.css"/>
         <!-- Load brands block CSS -->
         <css src="css/brands-block.css"/>
+        <!-- Load popular products slider CSS -->
+        <css src="css/popular-products-slider.css"/>
+        <!-- Load popular products slider JS -->
+        <script src="js/popular-products-slider.js"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -59,6 +63,12 @@
                    name="topocentras.brands.block" 
                    template="Magento_Theme::brands/block.phtml"
                    after="topocentras.categories.slider"/>
+            
+            <!-- Popular Products Slider -->
+            <block class="Topocentras\PopularProducts\Block\PopularProducts" 
+                   name="topocentras.popular.products" 
+                   template="Magento_Theme::popular-products/slider.phtml"
+                   after="topocentras.brands.block"/>
         </referenceContainer>
     </body>
 </page>

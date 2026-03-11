@@ -1,0 +1,32 @@
+<?php
+/**
+ * @var $block \Magento\Checkout\Block\Cart\Sidebar
+ */
+?>
+<a class="action showcart" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>" data-bind="scope: 'minicart_content'">
+    <img class="cart-icon" src="<?= $block->getViewFileUrl('images/icons/header/cart.svg') ?>" alt="<?= $block->escapeHtml(__('Krepšelis')) ?>" width="24" height="24">
+    <span class="cart-text" data-bind="html: getCartParam('summary_count') ? '<?= $block->escapeHtml(__('Krepšelis')) ?> (' + getCartParam('summary_count') + ')' : '<?= $block->escapeHtml(__('Krepšelis tuščias')) ?>'"><?= $block->escapeHtml(__('Krepšelis tuščias')) ?></span>
+</a>
+<div class="block block-minicart" data-role="dropdownDialog" data-mage-init='{"dropdownDialog":{
+        "appendTo":"[data-block=minicart]",
+        "triggerTarget":".showcart",
+        "timeout": "2000",
+        "closeOnMouseLeave": false,
+        "closeOnEscape": true,
+        "triggerClass":"active",
+        "parentClass":"active",
+        "buttons":[]}}'>
+    <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+</div>
+<script type="text/x-magento-init">
+{
+    "[data-block='minicart']": {
+        "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+    },
+    "*": {
+        "Magento_Ui/js/block-loader": "<?= $block->escapeUrl($block->getViewFileUrl('images/loader-1.gif')) ?>"
+    }
+}
+</script>
