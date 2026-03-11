@@ -5,6 +5,8 @@
         <css src="css/slider.css"/>
         <!-- Load category menu CSS -->
         <css src="css/category-menu.css"/>
+        <!-- Load category menu JS -->
+        <script src="js/category-menu.js"/>
         <!-- Load banner carousel CSS -->
         <css src="css/banner-carousel.css"/>
         <!-- Load weekly deals slider CSS -->
