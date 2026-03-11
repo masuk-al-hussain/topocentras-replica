@@ -1,3 +1,8 @@
+.homepage-slider-wrapper{
+    gap: 35px;
+}
+
+
 /* Category Menu Styles */
 
 .category-menu-wrapper {
@@ -10,6 +15,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     overflow: visible;
+    width: 270px;
 }
 
 .category-menu-header {
@@ -36,6 +42,7 @@
 .category-item {
     position: relative;
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0px;
 }
 
 .category-item:last-child {
@@ -46,7 +53,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 20px;
+    padding: 10px 10px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
@@ -59,8 +66,8 @@
 }
 
 .category-icon {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
