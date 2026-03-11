@@ -1,9 +1,13 @@
 <?php
+if (!$block->isEnabled()) {
+    return;
+}
+
 $products = $block->getPopularProducts();
 ?>
 <div class="popular-products-widget">
     <div class="popular-products-container">
-        <h1 class="popular-products-title"><?= __('Populiaru dabar') ?></h1>
+        <h1 class="popular-products-title"><?= $block->escapeHtml($block->getSliderTitle()) ?></h1>
         
         <?php if ($products && $products->getSize()): ?>
         <div class="popular-products-slider">
