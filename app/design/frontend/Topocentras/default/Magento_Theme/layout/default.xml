@@ -2,6 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="css/styles.css"/>
+        <css src="css/footer.css"/>
     </head>
     <body>
         <!-- Remove header.panel after moving wishlist out -->
@@ -43,6 +44,64 @@
                    name="topocentras.navigation" 
                    template="Magento_Theme::html/navigation.phtml"
                    after="header"/>
+        </referenceContainer>
+        
+        <!-- Footer Customization -->
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        
+        <referenceContainer name="footer">
+            <!-- Banner and Newsletter Horizontal Container -->
+            <container name="footer.top.container" htmlTag="div" htmlClass="footer-top-container" before="-">
+                <!-- Topo Klubas Banner -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.topoklubas.banner" 
+                       template="Magento_Theme::footer/topoklubas-banner.phtml"
+                       before="-"/>
+                
+                <!-- Newsletter Section -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.newsletter" 
+                       template="Magento_Theme::footer/newsletter.phtml"
+                       after="footer.topoklubas.banner"/>
+            </container>
+            
+            <!-- Divider -->
+            <container name="footer.divider.1" htmlTag="div" htmlClass="footer-divider" after="footer.top.container"/>
+            
+            <!-- Footer Menu Container -->
+            <container name="footer.menu.container" htmlTag="div" htmlClass="footer-menu-container" after="footer.divider.1">
+                <!-- About Topo Centra Menu -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.menu.about"
+                       template="Magento_Theme::footer/menu-about.phtml"/>
+                
+                <!-- Purchase Information Menu -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.menu.purchase"
+                       template="Magento_Theme::footer/menu-purchase.phtml"/>
+                
+                <!-- Contact Section -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.contact"
+                       template="Magento_Theme::footer/contact.phtml"/>
+                
+                <!-- Social Media Section -->
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.social" 
+                       template="Magento_Theme::footer/social.phtml"/>
+            </container>
+            
+            <!-- Divider -->
+            <container name="footer.divider.2" htmlTag="div" htmlClass="footer-divider" after="footer.menu.container"/>
+            
+            <!-- Copyright -->
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="footer.copyright" 
+                   template="Magento_Theme::footer/copyright.phtml"
+                   after="footer.divider.2"/>
         </referenceContainer>
     </body>
 </page>

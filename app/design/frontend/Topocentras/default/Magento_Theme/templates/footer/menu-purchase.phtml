@@ -1,0 +1,27 @@
+<?php
+/**
+ * Footer Menu - Purchase Information
+ */
+?>
+<div class="footer-menu">
+    <div class="footer-menu-toggle">
+        <h2 class="footer-menu-title">
+            <a href="#"><?= __('Pirkimo informacija') ?></a>
+        </h2>
+    </div>
+    <div class="footer-menu-content">
+        <ul>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('mokejimo-budai')) ?>"><?= __('Mokėjimo būdai') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('pristatymo-salygos')) ?>"><?= __('Pristatymo sąlygos') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('prekiu-garantija')) ?>"><?= __('Prekių garantija') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('prekiu-grazinimo-garantija')) ?>"><?= __('Prekių grąžinimas') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('taisykles')) ?>"><?= __('Taisyklės') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('privatumo-politika')) ?>"><?= __('Privatumo politika') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('kaip-apsipirkti-topo-centras-internetineje-parduotuveje')) ?>"><?= __('Kaip pirkti? Video instrukcijos') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('uzsakymo-informacija')) ?>"><?= __('Užsakymo informacija') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('duk')) ?>"><?= __('DUK') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('naujienos/kategorija/prekiu-gidai')) ?>"><?= __('Prekių gidai') ?></a></li>
+            <li><a href="<?= $block->escapeUrl($block->getUrl('naujienos/kategorija/videoapzvalgos')) ?>"><?= __('Produktų video apžvalgos') ?></a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<?php
+/**
+ * Newsletter subscription section
+ */
+?>
+<div class="footer-newsletter-container">
+    <div class="newsletter-title"><?= __('Gaukite GERIAUSIUS pasiūlymus pirmas!') ?></div>
+    <div class="newsletter-subtitle"><?= __('Gaukite karštas akcijas, informaciją apie žaidimus, renginius ir nuolaidas tiesiai į savo el. paštą.') ?></div>
+    
+    <div class="newsletter-success-container" style="display: none;">
+        <div class="form-section">
+            <span class="newsletter-tickmark">✔</span>
+            <span><?= __('Dėkojame! Nueikite į el. pašto dėžutę ir patvirtinkite prenumeratą.') ?></span>
+        </div>
+    </div>
+    
+    <div class="newsletter-input-container">
+        <form class="form subscribe" 
+              novalidate 
+              action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>" 
+              method="post"
+              data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+              id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <div class="control">
+                    <input name="email" 
+                           type="email" 
+                           class="newsletter-input-field" 
+                           placeholder="<?= $block->escapeHtmlAttr(__('Jūsų elektroninis paštas')) ?>"
+                           data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="newsletter-subscribe-button action subscribe primary" 
+                        title="<?= $block->escapeHtmlAttr(__('Užsakyti')) ?>" 
+                        type="submit">
+                    <span><?= __('Užsakyti') ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="newsletter-text"><?= __('Galėsite bet kada atsisakyti pranešimų gavimo.') ?></div>
+    <span class="newsletter-link-text">
+        <?= __('Užsakant naujienlaiškį Jūs sutinkate, kad jūsų duomenys būtų tvarkomi tiesioginės rinkodaros tikslu. Daugiau informacijos:') ?>
+        <a href="<?= $block->escapeUrl($block->getUrl('privatumo-politika')) ?>"><?= __('Privatumo politika') ?></a>
+    </span>
+</div>
