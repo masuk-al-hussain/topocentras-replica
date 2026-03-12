@@ -70,7 +70,7 @@ class OfferSlider extends Template
                         'name' => $product->getName(),
                         'sku' => $product->getSku(),
                         'url' => $product->getProductUrl(),
-                        'image' => $this->imageHelper->init($product, 'product_page_image_small')->getUrl(),
+                        'image' => $this->imageHelper->init($product, 'product_base_image')->setImageFile($product->getImage())->resize(400)->getUrl(),
                         'price' => $this->priceHelper->currency($product->getPrice(), true, false),
                         'final_price' => $this->priceHelper->currency($product->getFinalPrice(), true, false),
                         'product' => $product

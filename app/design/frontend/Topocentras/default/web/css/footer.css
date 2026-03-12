@@ -348,7 +348,7 @@
 /* Copyright */
 .footer-copyright-container {
     text-align: left;
-    padding: 20px 0;
+    padding-top: 20px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     border-top: 1px solid;
