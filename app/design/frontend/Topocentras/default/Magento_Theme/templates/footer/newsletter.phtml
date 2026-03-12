@@ -34,6 +34,7 @@
                 <button class="newsletter-subscribe-button action subscribe primary" 
                         title="<?= $block->escapeHtmlAttr(__('Užsakyti')) ?>" 
                         type="submit">
+                    <img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icons/footer/mail.svg')) ?>" alt="" width="16" height="16">
                     <span><?= __('Užsakyti') ?></span>
                 </button>
             </div>
@@ -43,6 +44,6 @@
     <div class="newsletter-text"><?= __('Galėsite bet kada atsisakyti pranešimų gavimo.') ?></div>
     <span class="newsletter-link-text">
         <?= __('Užsakant naujienlaiškį Jūs sutinkate, kad jūsų duomenys būtų tvarkomi tiesioginės rinkodaros tikslu. Daugiau informacijos:') ?>
-        <a href="<?= $block->escapeUrl($block->getUrl('privatumo-politika')) ?>"><?= __('Privatumo politika') ?></a>
+        <a href="#"><?= __('Privatumo politika') ?></a>
     </span>
 </div>

@@ -87,7 +87,6 @@
 
 .newsletter-input-container form {
     display: flex;
-    gap: 10px;
     width: 100%;
     max-width: 600px;
 }
@@ -113,16 +112,17 @@
 
 .newsletter-input-field:focus {
     outline: none;
-    border-color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    background: #fff;
 }
 
 .newsletter-subscribe-button {
     padding: 12px 30px;
-    background-color: #ff8c00;
+    background-color: #f57e20 !important;
+    border: 1px solid #f57e20 !important;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 0px;
     font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
@@ -131,7 +131,7 @@
 }
 
 .newsletter-subscribe-button:hover {
-    background-color: #ff7700;
+    background-color: #ff7700 !important;
 }
 
 .newsletter-text {
@@ -260,12 +260,15 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #1877f2;
+    background-image: url('../images/icons/footer/facebook.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     text-decoration: none;
     border-radius: 50%;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: transform 0.3s;
 }
 
 .social-facebook:hover {
@@ -306,19 +309,31 @@
 }
 
 .social-instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background-image: url('../images/icons/footer/insta.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .social-tiktok {
-    background-color: #000;
+    background-image: url('../images/icons/footer/tiktok.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .social-youtube {
-    background-color: #ff0000;
+    background-image: url('../images/icons/footer/yt.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .social-linkedin {
-    background-color: #0077b5;
+    background-image: url('../images/icons/footer/linkedin.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .social-facebook:hover,
