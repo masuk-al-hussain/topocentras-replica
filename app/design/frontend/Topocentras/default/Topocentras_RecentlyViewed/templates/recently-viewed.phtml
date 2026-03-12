@@ -1,0 +1,77 @@
+<?php
+/**
+ * @var $block \Topocentras\RecentlyViewed\Block\RecentlyViewed
+ */
+$recentlyViewedProducts = $block->getRecentlyViewedProducts();
+$hasProducts = $block->hasRecentlyViewedProducts();
+?>
+
+<?php if ($hasProducts): ?>
+<section class="recently-viewed-container" 
+         data-recently-viewed
+         data-mage-init='{"js/recently-viewed": {}}'>
+    <h2 class="recently-viewed-title">
+        <span><?= __('Jūsų peržiūrėtos prekės:') ?></span>
+        <a href="#" class="recently-viewed-remove-all" data-remove-all>
+            <?= __('Pašalinti visas') ?>
+        </a>
+    </h2>
+    
+    <ul class="recently-viewed-items-container">
+        <?php foreach ($recentlyViewedProducts as $product): ?>
+            <li class="recently-viewed-list-item" data-product-id="<?= $product->getId() ?>">
+                <div class="recently-viewed-product">
+                    <a class="recently-viewed-link" 
+                       aria-label="<?= $block->escapeHtmlAttr($product->getName()) ?>" 
+                       href="<?= $block->escapeUrl($block->getProductUrl($product)) ?>">
+                    </a>
+                    
+                    <div class="recently-viewed-product-image-wrapper">
+                        <img src="<?= $block->escapeUrl($block->getProductImageUrl($product)) ?>" 
+                             alt="<?= $block->escapeHtmlAttr($product->getName()) ?>" 
+                             class="recently-viewed-product-image">
+                        <div class="recently-viewed-overlay-labels"></div>
+                    </div>
+                    
+                    <h3 class="recently-viewed-item-name">
+                        <?= $block->escapeHtml($product->getName()) ?>
+                    </h3>
+                    
+                    <div class="recently-viewed-price-container">
+                        <?php 
+                        $finalPrice = $product->getFinalPrice();
+                        $regularPrice = $product->getPrice();
+                        $hasSpecialPrice = $finalPrice < $regularPrice;
+                        ?>
+                        
+                        <?php if ($hasSpecialPrice): ?>
+                            <div class="loyalty-price-wrapper recently-viewed-loyalty-price">
+                                <div class="loyalty-price-details">
+                                    <div class="loyalty-price-label">
+                                        <a href="/topoklubas" target="_blank">TOPO KLUBO</a> nariams
+                                    </div>
+                                    <div class="loyalty-price-price">
+                                        <img src="<?= $block->escapeUrl($block->getViewFileUrl('images/icons/topostar.svg')) ?>" alt="">
+                                        <span><?= $block->getFormattedPrice($finalPrice) ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recently-viewed-regular-price">
+                                <span><?= $block->getFormattedPrice($regularPrice) ?></span>
+                            </div>
+                        <?php else: ?>
+                            <div class="recently-viewed-regular-price">
+                                <span><?= $block->getFormattedPrice($regularPrice) ?></span>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    
+                    <div class="product-stickers-labels"></div>
+                </div>
+                
+                <div class="label-images"></div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</section>
+<?php endif; ?>

@@ -21,6 +21,8 @@
         <css src="css/popular-products-slider.css"/>
         <!-- Load popular products slider JS -->
         <script src="js/popular-products-slider.js"/>
+        <!-- Load recently viewed CSS -->
+        <css src="css/recently-viewed.css"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -168,6 +170,13 @@
                   <argument name="slider_id" xsi:type="string">12</argument>
               </arguments>
             </block>
+            
+            <!-- Recently Viewed Products -->
+            <block class="Topocentras\RecentlyViewed\Block\RecentlyViewed" 
+                   name="topocentras.recently.viewed" 
+                   template="Topocentras_RecentlyViewed::recently-viewed.phtml"
+                   cacheable="false"
+                   after="offer.slider.specific-12" />
         </referenceContainer>
     </body>
 </page>

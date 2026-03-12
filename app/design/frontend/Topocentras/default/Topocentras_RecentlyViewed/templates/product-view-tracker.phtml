@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var $block \Topocentras\RecentlyViewed\Block\ProductViewTracker
+ */
+$productId = $block->getCurrentProductId();
+?>
+<?php if ($productId): ?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "js/product-view-tracker": {
+            "productId": <?= (int)$productId ?>
+        }
+    }
+}
+</script>
+<?php endif; ?>
