@@ -194,13 +194,30 @@
 }
 
 @media (max-width: 768px) {
-    .side-container {
+    .side-container,
+    .layout-right .side-container {
         flex-direction: column;
+    }
+    
+    .left-column {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .top-offers-title-block {
+        text-align: center;
+        width: 100%;
     }
     
     .top-offers-banner-link {
         width: 100%;
+        max-width: 400px;
         height: 200px;
+        margin: 0 auto;
+    }
+    
+    .top-offers-banner-link img {
+        object-fit: contain;
     }
     
     .slider-prev {

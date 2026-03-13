@@ -213,6 +213,11 @@
     .recently-viewed-product-image-wrapper {
         height: 160px;
     }
+
+    .recently-viewed-remove-all {
+        border: none;
+        padding: 0;
+    }
 }
 
 @media (max-width: 480px) {
