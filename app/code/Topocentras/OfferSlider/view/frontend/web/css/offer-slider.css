@@ -21,10 +21,6 @@
     flex-direction: row-reverse;
 }
 
-.layout-right .top-offers-title-block {
-    /* margin-bottom: 20px; */
-}
-
 /* Left Column - Title and Banner Stacked Vertically */
 .left-column {
     flex-shrink: 0;
@@ -126,8 +122,7 @@
     font-size: 13px;
     color: #0066cc;
     text-decoration: none;
-    margin-bottom: 15px;
-    min-height: 36px;
+    margin-bottom: auto;
     line-height: 1.4;
 }
 
@@ -136,7 +131,8 @@
 }
 
 /* Price Box */
-.price-box {
+.product-item .price-box {
+    margin: 0;
     margin-top: auto;
 }
 
