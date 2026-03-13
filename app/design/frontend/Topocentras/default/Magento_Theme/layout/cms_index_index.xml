@@ -13,6 +13,8 @@
         <css src="css/weekly-deals-slider.css"/>
         <!-- Load weekly deals slider JS -->
         <script src="js/weekly-deals-slider.js"/>
+        <!-- Load Owl Carousel CSS -->
+        <css src="css/owl.carousel.css"/>
         <!-- Load categories slider CSS -->
         <css src="css/categories-slider.css"/>
         <!-- Load categories slider JS -->
