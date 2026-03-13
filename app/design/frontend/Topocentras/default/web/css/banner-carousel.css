@@ -68,17 +68,26 @@
 /* Mobile */
 @media (max-width: 768px) {
     #banner-six-3 {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-wrap: wrap;
         gap: 10px;
-        padding: 0 15px;
+        padding: 0;
         margin: 15px auto;
+    }
+    
+    #banner-six-3 .item-wrapper {
+        display: block;
+        border-radius: 4px;
+        flex: 0 0 calc(50% - 5px);
+        aspect-ratio: 1 / 1 !important;
     }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
     #banner-six-3 {
-        padding: 0 10px;
+        padding: 0;
         margin: 10px auto;
+        gap: 10px;
     }
 }
