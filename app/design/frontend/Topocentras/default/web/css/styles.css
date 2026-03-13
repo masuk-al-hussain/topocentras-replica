@@ -451,6 +451,10 @@ body.mobile-menu-open {
 }
 
 @media (max-width: 992px) {
+    .page-main {
+        padding: 10;
+    }
+
     .topbar {
         display: none;
     }
