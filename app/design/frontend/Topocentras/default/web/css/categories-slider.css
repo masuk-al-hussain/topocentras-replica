@@ -1,10 +1,9 @@
 .imagesContainer-desk {
     width: 100%;
     max-width: 1232px;
-    margin: 40px auto;
     background-color: #f5f5f5;
     border-radius: 8px;
-    padding: 30px 15px;
+    padding-bottom: 30px;
 }
 
 .imagesContainer-desk .categories-slider-wrapper {
@@ -18,7 +17,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .imagesContainer-desk .categories-container .category-link {

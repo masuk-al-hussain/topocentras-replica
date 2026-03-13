@@ -2,19 +2,16 @@
 .popular-products-widget {
     width: 100%;
     margin: 40px 0;
-    background: #fff;
 }
 
 .popular-products-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: fit-content;
 }
 
 .popular-products-title {
     font-size: 32px;
     font-weight: 700;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     color: #000;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -28,10 +25,12 @@
     display: flex;
     gap: 0;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding: 10px 0 20px;
+    padding: 0;
+    align-items: stretch;
 }
 
 .products-track::-webkit-scrollbar {
@@ -49,11 +48,11 @@
 .lupa-search-result-product-contents {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 98%;
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
-    padding: 15px;
+    padding: 0;
     transition: all 0.2s ease;
     position: relative;
 }
@@ -67,7 +66,7 @@
 .lupa-search-result-product-image-section {
     display: block;
     text-decoration: none;
-    margin-bottom: 12px;
+    padding: 0 15px;
 }
 
 .lupa-search-results-image-wrapper {
@@ -89,12 +88,12 @@
 .lupa-search-result-product-details-section {
     display: flex;
     flex-direction: column;
+    gap: 7px;
     flex: 1;
 }
 
-/* Product Title */
 .lupa-search-results-product-title {
-    margin-bottom: 8px;
+    padding: 0 15px;
 }
 
 .lupa-search-results-product-title-text {
@@ -142,7 +141,7 @@
 
 /* Loyalty Price */
 .loyalty-price {
-    margin-bottom: 8px;
+    padding: 0 15px;
 }
 
 .LoyaltyPrice-wrapper-2ws {
@@ -179,6 +178,7 @@
 /* Final Price */
 .final-price {
     margin-bottom: 10px;
+    padding: 0 15px;
 }
 
 .final-price span {
@@ -189,15 +189,14 @@
 
 /* Store Delivery Notice */
 .StoreDeliveryNotice-label-2PD {
-    display: flex;
+    display: block;
     align-items: center;
     gap: 6px;
     padding: 6px 10px;
     background-color: #0a509b;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     font-size: 12px;
-    margin-bottom: 12px;
 }
 
 .StoreDeliveryNotice-icon-1d- {
@@ -433,9 +432,5 @@
     .product-card {
         flex: 0 0 100%;
         min-width: 100%;
-    }
-    
-    .popular-products-container {
-        padding: 0 15px;
     }
 }

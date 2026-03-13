@@ -64,7 +64,7 @@ $products = $block->getPopularProducts();
                                             <?= __('TOPO KLUBO nariams') ?>
                                         </div>
                                         <div class="LoyaltyPrice-price-2eZ">
-                                            <img src="<?= $block->getViewFileUrl('images/topo-club-icon.svg') ?>" alt="">
+                                            <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
                                             <span><?= $block->getFormattedPrice($product->getSpecialPrice()) ?></span>
                                         </div>
                                     </div>
@@ -79,39 +79,6 @@ $products = $block->getPopularProducts();
                             <div class="StoreDeliveryNotice-label-2PD">
                                 <img class="StoreDeliveryNotice-icon-1d-" src="<?= $block->getViewFileUrl('images/shipping-icon.svg') ?>" alt="">
                                 <?= __('Atsiimkite jau po 30 min.') ?>
-                            </div>
-                        </div>
-                        
-                        <div class="lupa-element-group-card-bottom">
-                            <div class="lupa-search-results-add-to-cart-wrapper">
-                                <div class="lupa-search-results-product-addtocart">
-                                    <button class="lupa-add-to-cart" 
-                                            data-product-id="<?= $product->getId() ?>"
-                                            data-product-sku="<?= $block->escapeHtml($product->getSku()) ?>">
-                                        <?= __('Į krepšelį') ?>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <div class="lupa-wishlist">
-                                <div class="WishlistButton-container-jZ9">
-                                    <div class="WishlistButton-inner-2oN">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="lupa-element-group-compare">
-                            <div class="lupa-compare">
-                                <button class="Compare-compareContainer-uDf" data-product-id="<?= $product->getId() ?>">
-                                    <span class="Compare-checkboxWrapper-C52">
-                                        <span class="Checkbox-checkBox-1fD"></span>
-                                    </span>
-                                    <span><?= __('Palyginti') ?></span>
-                                </button>
                             </div>
                         </div>
                     </div>
