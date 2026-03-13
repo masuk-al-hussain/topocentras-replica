@@ -69,8 +69,15 @@ foreach ($sliders as $slider):
                                                 <?= __('TOPO KLUBO nariams') ?>
                                             </div>
                                             <div class="LoyaltyPrice-price-2eZ">
-                                                <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
-                                                <span><?= $product['special_price'] ?><?php if ($product['discount_percentage']): ?> (<?= $product['discount_percentage'] ?>% Nuolaida)<?php endif; ?></span>
+                                                <div class="LoyaltyPrice-price-special-price">
+                                                     <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
+                                                <span class="special-price"><?= $product['special_price'] ?></span>
+                                                </div>
+
+                                               
+                                                <?php if ($product['discount_percentage']): ?>
+                                                <span class="discount-percentage"><?= $product['discount_percentage'] ?>% Nuolaida</span>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>

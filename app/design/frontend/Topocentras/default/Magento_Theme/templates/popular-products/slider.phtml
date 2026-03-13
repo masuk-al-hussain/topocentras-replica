@@ -72,8 +72,13 @@ $products = $block->getPopularProducts();
                                             <?= __('TOPO KLUBO nariams') ?>
                                         </div>
                                         <div class="LoyaltyPrice-price-2eZ">
-                                            <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
-                                            <span><?= $block->getFormattedPrice($product->getSpecialPrice()) ?><?php if ($discountPercentage): ?> (<?= $discountPercentage ?>% Nuolaida)<?php endif; ?></span>
+                                            <div class="LoyaltyPrice-price-special-price">
+                                                <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
+                                                <span class="special-price"><?= $block->getFormattedPrice($product->getSpecialPrice()) ?></span>
+                                            </div>
+                                            <?php if ($discountPercentage): ?>
+                                            <span class="discount-percentage"><?= $discountPercentage ?>% Nuolaida</span>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>

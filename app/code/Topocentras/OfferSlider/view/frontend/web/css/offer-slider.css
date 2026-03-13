@@ -141,11 +141,59 @@
 
 .product-item .loyalty-price {
     padding: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.product-item .loyalty-price  .LoyaltyPrice-price-2eZ {
+.LoyaltyPrice-wrapper-2ws {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.LoyaltyPrice-loyaltyDetails-2dv {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.LoyaltyPrice-label-6p8 {
+    font-size: 11px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.LoyaltyPrice-price-2eZ {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     font-size: 13px;
+    align-items: start;
+}
+
+.LoyaltyPrice-price-special-price {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.LoyaltyPrice-price-2eZ img {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+}
+
+.LoyaltyPrice-price-2eZ .special-price {
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    gap: 6px;
+}
+
+.LoyaltyPrice-price-2eZ .discount-percentage {
+    color: #e74c3c;
+    font-size: 12px;
 }
 
 /* Navigation Buttons */
@@ -200,6 +248,22 @@
     .top-offers-banner-link {
         width: 250px;
     }
+    
+    .LoyaltyPrice-wrapper-2ws {
+        padding: 8px;
+    }
+    
+    .LoyaltyPrice-label-6p8 {
+        font-size: 10px;
+    }
+    
+    .LoyaltyPrice-price-2eZ {
+        font-size: 12px;
+    }
+    
+    .LoyaltyPrice-price-2eZ .discount-percentage {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -235,5 +299,31 @@
     
     .slider-next {
         right: 5px;
+    }
+    
+    .LoyaltyPrice-wrapper-2ws {
+        padding: 6px 8px;
+    }
+    
+    .LoyaltyPrice-label-6p8 {
+        font-size: 9px;
+    }
+    
+    .LoyaltyPrice-price-2eZ {
+        font-size: 11px;
+        gap: 3px;
+    }
+    
+    .LoyaltyPrice-price-special-price {
+        gap: 4px;
+    }
+    
+    .LoyaltyPrice-price-2eZ img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .LoyaltyPrice-price-2eZ .discount-percentage {
+        font-size: 10px;
     }
 }
