@@ -23,6 +23,8 @@
         <script src="js/popular-products-slider.js"/>
         <!-- Load recently viewed CSS -->
         <css src="css/recently-viewed.css"/>
+        <!-- Load bottom blocks CSS -->
+        <css src="css/bottom-blocks.css"/>
     </head>
     <body>
         <!-- Remove page title from homepage -->
@@ -177,6 +179,12 @@
                    template="Topocentras_RecentlyViewed::recently-viewed.phtml"
                    cacheable="false"
                    after="offer.slider.specific-12" />
+            
+            <!-- Bottom Blocks -->
+            <block class="Magento\Framework\View\Element\Template" 
+                   name="topocentras.bottom.blocks" 
+                   template="Magento_Theme::bottom-blocks/cards.phtml"
+                   after="topocentras.recently.viewed"/>
         </referenceContainer>
     </body>
 </page>
