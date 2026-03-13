@@ -2,10 +2,16 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Topocentras_Slider::slider" 
-             title="Slider" 
+             title="Sliders" 
+             module="Topocentras_Slider" 
+             sortOrder="100" 
+             parent="Magento_Backend::content" 
+             resource="Topocentras_Slider::slider"/>
+        <add id="Topocentras_Slider::main_slider" 
+             title="Top Slider" 
              module="Topocentras_Slider" 
              sortOrder="10" 
-             parent="Magento_Backend::content" 
+             parent="Topocentras_Slider::slider" 
              action="topocentras_slider/slide/index" 
              resource="Topocentras_Slider::slider"/>
     </menu>
