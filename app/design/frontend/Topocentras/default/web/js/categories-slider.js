@@ -13,7 +13,7 @@ require(['jquery', 'owlcarousel'], function($) {
                 navClass: ['categories-slider-left-arrow', 'categories-slider-right-arrow'],
                 responsive: {
                     0: {
-                        items: 2,
+                        items: 3,
                         autoWidth: false
                     },
                     480: {
