@@ -59,7 +59,7 @@ foreach ($sliders as $slider):
                                          loading="lazy">
                                 </a>
                                 <a class="product-name" href="<?= $block->escapeUrl($product['url']) ?>">
-                                    <?= $block->escapeHtml($product['name']) ?>
+                                    <?= $block->escapeHtml(mb_strlen($product['name']) > 30 ? mb_substr($product['name'], 0, 30) . '...' : $product['name']) ?>
                                 </a>
                                 <div class="price-box">
                                     <span class="price"><?= $product['final_price'] ?></span>
