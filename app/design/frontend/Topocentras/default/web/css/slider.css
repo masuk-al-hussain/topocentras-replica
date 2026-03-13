@@ -33,6 +33,12 @@
     position: relative;
     width: 100%;
     height: 400px;
+    touch-action: pan-y pinch-zoom;
+    cursor: grab;
+}
+
+.top-slider .slider-wrapper:active {
+    cursor: grabbing;
 }
 
 .top-slider .slide {
@@ -105,4 +111,24 @@
 .top-slider .dot.active,
 .top-slider .dot:hover {
     background-color: white;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+    .top-slider .slider-wrapper {
+        height: 200px;
+    }
+    
+    .top-slider .slider-nav {
+        display: none;
+    }
+    
+    .top-slider .slider-dots {
+        bottom: 10px;
+    }
+    
+    .top-slider .dot {
+        width: 8px;
+        height: 8px;
+    }
 }
