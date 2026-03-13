@@ -27,3 +27,79 @@
         </div>
     </div>
 </div>
+
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <button class="mobile-menu-close" aria-label="<?= __('Close') ?>">&times;</button>
+    </div>
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-section">
+            <a href="#" class="mobile-menu-item">
+                <img src="<?php echo $block->getViewFileUrl('images/icons/topbar/1.svg'); ?>" alt="">
+                <span><?= __('Parduotuvės') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?php echo $block->getViewFileUrl('images/icons/topbar/2.svg'); ?>" alt="">
+                <span><?= __('Verslui') ?></span>
+            </a>
+            <div class="mobile-menu-item">
+                <img src="<?php echo $block->getViewFileUrl('images/icons/topbar/3.svg'); ?>" alt="">
+                <span>+370 660 00200</span>
+                <div class="mobile-menu-hours"><?= __('I - V 8:00 - 22:00 | VI - VII 9:00 - 17:00') ?></div>
+            </div>
+        </div>
+        
+        <div class="mobile-menu-divider"></div>
+        
+        <div class="mobile-menu-section">
+            <a href="#" class="mobile-menu-item mobile-menu-catalog">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/1.svg') ?>" alt="">
+                <span><?= __('Prekių katalogas') ?></span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/2.webp') ?>" alt="">
+                <span><?= __('Akcijos ir pasiūlymai') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/3.png') ?>" alt="">
+                <span><?= __('Apple parduotuvė') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/4.png') ?>" alt="">
+                <span><?= __('Paslaugos') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/5.svg') ?>" alt="">
+                <span><?= __('Prekės į minusą') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/6.png') ?>" alt="">
+                <span><?= __('Topo Klubo pasiūlymai') ?></span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <img src="<?= $block->getViewFileUrl('images/icons/nav/7.svg') ?>" alt="">
+                <span><?= __('Dovanų kuponas') ?></span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-divider"></div>
+        
+        <div class="mobile-menu-section">
+            <a href="#" class="mobile-menu-item">
+                <img src="<?php echo $block->getViewFileUrl('images/icons/topbar/4.svg'); ?>" alt="">
+                <span><?= __('Užsakymo sekimas') ?></span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <a href="/customer/account" class="mobile-menu-login">
+                <img src="<?php echo $block->getViewFileUrl('images/icons/topbar/5.svg'); ?>" alt="">
+                <span><?= __('Prisijungti') ?></span>
+            </a>
+        </div>
+    </div>
+</div>

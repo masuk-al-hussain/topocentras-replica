@@ -3,6 +3,7 @@
     <head>
         <css src="css/styles.css"/>
         <css src="css/footer.css"/>
+        <script src="js/mobile-menu.js"/>
     </head>
     <body>
         <!-- Remove header.panel after moving wishlist out -->
