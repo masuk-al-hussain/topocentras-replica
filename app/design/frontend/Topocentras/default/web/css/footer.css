@@ -381,10 +381,6 @@
         grid-template-columns: 1fr;
     }
     
-    .newsletter-input-container form {
-        flex-direction: column;
-    }
-    
     .newsletter-subscribe-button {
         width: 100%;
     }
