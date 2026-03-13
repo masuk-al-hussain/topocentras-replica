@@ -57,6 +57,14 @@ $products = $block->getPopularProducts();
                             <div class="flex-grow-1"></div>
                             
                             <?php if ($product->getSpecialPrice()): ?>
+                            <?php
+                                $regularPrice = $product->getPrice();
+                                $specialPrice = $product->getSpecialPrice();
+                                $discountPercentage = null;
+                                if ($specialPrice && $regularPrice > 0) {
+                                    $discountPercentage = round((($regularPrice - $specialPrice) / $regularPrice) * 100);
+                                }
+                            ?>
                             <div class="loyalty-price">
                                 <div class="LoyaltyPrice-wrapper-2ws">
                                     <div class="LoyaltyPrice-loyaltyDetails-2dv">
@@ -65,7 +73,7 @@ $products = $block->getPopularProducts();
                                         </div>
                                         <div class="LoyaltyPrice-price-2eZ">
                                             <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
-                                            <span><?= $block->getFormattedPrice($product->getSpecialPrice()) ?></span>
+                                            <span><?= $block->getFormattedPrice($product->getSpecialPrice()) ?><?php if ($discountPercentage): ?> (<?= $discountPercentage ?>% Nuolaida)<?php endif; ?></span>
                                         </div>
                                     </div>
                                 </div>

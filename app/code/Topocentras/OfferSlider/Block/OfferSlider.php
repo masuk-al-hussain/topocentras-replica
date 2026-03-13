@@ -66,13 +66,23 @@ class OfferSlider extends Template
             try {
                 $product = $this->productRepository->get($sku);
                 if ($product->getId()) {
+                    $specialPrice = $product->getSpecialPrice();
+                    $regularPrice = $product->getPrice();
+                    $discountPercentage = null;
+                    
+                    if ($specialPrice && $regularPrice > 0) {
+                        $discountPercentage = round((($regularPrice - $specialPrice) / $regularPrice) * 100);
+                    }
+                    
                     $products[] = [
                         'name' => $product->getName(),
                         'sku' => $product->getSku(),
                         'url' => $product->getProductUrl(),
                         'image' => $this->imageHelper->init($product, 'product_base_image')->setImageFile($product->getImage())->resize(400)->getUrl(),
-                        'price' => $this->priceHelper->currency($product->getPrice(), true, false),
+                        'price' => $this->priceHelper->currency($regularPrice, true, false),
                         'final_price' => $this->priceHelper->currency($product->getFinalPrice(), true, false),
+                        'special_price' => $specialPrice ? $this->priceHelper->currency($specialPrice, true, false) : null,
+                        'discount_percentage' => $discountPercentage,
                         'product' => $product
                     ];
                 }

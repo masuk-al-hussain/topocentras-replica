@@ -134,9 +134,18 @@
 }
 
 .price-box .price {
-    font-size: 18px;
+    font-size: 20px !important;
     font-weight: bold;
     color: #000;
+}
+
+.product-item .loyalty-price {
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.product-item .loyalty-price  .LoyaltyPrice-price-2eZ {
+    font-size: 13px;
 }
 
 /* Navigation Buttons */

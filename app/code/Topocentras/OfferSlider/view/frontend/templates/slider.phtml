@@ -61,6 +61,21 @@ foreach ($sliders as $slider):
                                 <a class="product-name" href="<?= $block->escapeUrl($product['url']) ?>">
                                     <?= $block->escapeHtml(mb_strlen($product['name']) > 30 ? mb_substr($product['name'], 0, 30) . '...' : $product['name']) ?>
                                 </a>
+                                <?php if ($product['special_price']): ?>
+                                <div class="loyalty-price">
+                                    <div class="LoyaltyPrice-wrapper-2ws">
+                                        <div class="LoyaltyPrice-loyaltyDetails-2dv">
+                                            <div class="LoyaltyPrice-label-6p8">
+                                                <?= __('TOPO KLUBO nariams') ?>
+                                            </div>
+                                            <div class="LoyaltyPrice-price-2eZ">
+                                                <img src="<?= $block->getViewFileUrl('images/icons/topostar.svg') ?>" alt="">
+                                                <span><?= $product['special_price'] ?><?php if ($product['discount_percentage']): ?> (<?= $product['discount_percentage'] ?>% Nuolaida)<?php endif; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
                                 <div class="price-box">
                                     <span class="price"><?= $product['final_price'] ?></span>
                                 </div>
